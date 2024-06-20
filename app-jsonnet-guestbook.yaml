@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app-guestbook
+  name: app-jsonnet-guestbook
   namespace: argocd
 spec:
   project: default
@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/diaryevil/argocd-example-apps.git
     targetRevision: HEAD
-    path: guestbook
+    path: jsonnet-guestbook
   destination: 
     server: https://kubernetes.default.svc
     namespace: myapp
